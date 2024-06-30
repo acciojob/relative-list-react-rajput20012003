@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
+const relatives = ["relative1", "relative2", "relative3", "relative4"];
 const App = () => {
   return (
-    <div>
-      <h1>Relatives to Visit This Diwali</h1>
-      <ol key="relativeList">
-        <li key="relativeListItem1">Uncle Ramesh</li>
-        <li key="relativeListItem2">Aunt Meera</li>
-        <li key="relativeListItem3">Cousin Priya</li>
-        <li key="relativeListItem4">Grandma Kamala</li>
-        <li key="relativeListItem5">Brother Rahul</li>
+    <div id="main">
+      <ol id="relativeList" key={"relativeList"}>
+        {relatives.map((relative, i) => (
+          <li id={`relativeListItem${i + 1}`} key={`relativeListItem${i + 1}`}>
+            {relative}
+          </li>
+        ))}
       </ol>
     </div>
   );
